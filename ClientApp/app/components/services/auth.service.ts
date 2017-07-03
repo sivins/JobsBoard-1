@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Headers, Http } from "@angular/http";
-
+import { User } from '../users/userModel.component';
 import "rxjs/add/operator/toPromise";
 
 import { RequestResult } from "./authResult.model";
@@ -33,6 +33,18 @@ export class AuthService {
     checkLogin(): boolean {
         var token = sessionStorage.getItem(this.tokeyKey);
         return token != null;
+    }
+
+    checkRole(): User {
+        let user = new User();
+        this.getUserInfo().then(res => {
+                user.username = (res.Data as any).UserName;
+                user.email = (res.Data as any).email;
+                user.roles = (res.Data as any).roles;
+            });
+
+
+        return user;
     }
 
     getUserInfo(): Promise<RequestResult> {

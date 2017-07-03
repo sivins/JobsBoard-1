@@ -61,7 +61,7 @@ namespace reverseJobsBoard.Controllers
             ClaimsIdentity identity = new ClaimsIdentity( 
                 new GenericIdentity(user.Username, "TokenAuth"), 
                 new[] { 
-                    new Claim("UserID", user.UserID.ToString()) 
+                    new Claim("UserID", user.UserID.ToString())
                 } 
             ); 
  

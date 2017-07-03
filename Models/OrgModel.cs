@@ -8,6 +8,8 @@ namespace reverseJobsBoard.Models
 			public string Name { get; set; }
  
 			public List<UserOrg> UserOrgs {get;set;}
+			public List<OrgTechRel> OrgTech {get;set;}
+
 			
 		}
 

@@ -8,7 +8,7 @@ namespace reverseJobsBoard.Models
 			public Guid RoleID { get; set; } 
        		public string Name {get; set;}
 
-            public List<UserRole> UserRoles {get; set;}
+            public List<UserRole> UserRole {get; set;}
 		}
 
 }

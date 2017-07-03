@@ -7,7 +7,12 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { userDataComponent } from './components/users/user.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
 import { AuthService } from './components/services/auth.service';
+
+
 
 @NgModule({
     bootstrap: [ AppComponent ],
@@ -17,6 +22,8 @@ import { AuthService } from './components/services/auth.service';
         CounterComponent,
         FetchDataComponent,
         userDataComponent,
+        RegisterComponent,
+        LoginComponent,
         HomeComponent
     ],
     providers:[AuthService],

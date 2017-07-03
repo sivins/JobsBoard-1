@@ -11354,16 +11354,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/daschcraft/Documents/workspace/reverseJobsBoard/reverseJobsBoard.csproj",
+      "projectUniqueName": "/Users/daschcraft/Documents/workspace/JobsBoard/reverseJobsBoard.csproj",
       "projectName": "reverseJobsBoard",
-      "projectPath": "/Users/daschcraft/Documents/workspace/reverseJobsBoard/reverseJobsBoard.csproj",
-      "outputPath": "/Users/daschcraft/Documents/workspace/reverseJobsBoard/obj/",
+      "projectPath": "/Users/daschcraft/Documents/workspace/JobsBoard/reverseJobsBoard.csproj",
+      "outputPath": "/Users/daschcraft/Documents/workspace/JobsBoard/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/reverseJobsBoard.dll": "/Users/daschcraft/Documents/workspace/reverseJobsBoard/bin/placeholder/netcoreapp1.1/reverseJobsBoard.dll"
+        "lib/netcoreapp1.1/reverseJobsBoard.dll": "/Users/daschcraft/Documents/workspace/JobsBoard/bin/placeholder/netcoreapp1.1/reverseJobsBoard.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

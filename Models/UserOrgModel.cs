@@ -9,6 +9,7 @@ namespace reverseJobsBoard.Models
  
         	public Guid OrgID {get; set;}
 
+			public Boolean current {get;set;}
 			public User User {get; set;}
 			public Org Org {get; set;}
 			

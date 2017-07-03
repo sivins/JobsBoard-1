@@ -15,6 +15,7 @@ namespace reverseJobsBoard.Models
 
 			public List<UserRole> UserRoles {get; set;}
 			public List<UserOrg> UserOrgs {get;set;}
+			public List<UserTech> UserTech {get;set};
 			
 		}
 

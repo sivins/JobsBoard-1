@@ -7,3 +7,12 @@
 /Users/daschcraft/Documents/workspace/reverseJobsBoard/obj/Debug/netcoreapp1.1/reverseJobsBoard.dll
 /Users/daschcraft/Documents/workspace/reverseJobsBoard/obj/Debug/netcoreapp1.1/reverseJobsBoard.pdb
 /Users/daschcraft/Documents/workspace/reverseJobsBoard/obj/Debug/netcoreapp1.1/reverseJobsBoard.csprojResolveAssemblyReference.cache
+/Users/daschcraft/Documents/workspace/JobsBoard/bin/Debug/netcoreapp1.1/reverseJobsBoard.deps.json
+/Users/daschcraft/Documents/workspace/JobsBoard/bin/Debug/netcoreapp1.1/reverseJobsBoard.runtimeconfig.json
+/Users/daschcraft/Documents/workspace/JobsBoard/bin/Debug/netcoreapp1.1/reverseJobsBoard.runtimeconfig.dev.json
+/Users/daschcraft/Documents/workspace/JobsBoard/bin/Debug/netcoreapp1.1/reverseJobsBoard.dll
+/Users/daschcraft/Documents/workspace/JobsBoard/bin/Debug/netcoreapp1.1/reverseJobsBoard.pdb
+/Users/daschcraft/Documents/workspace/JobsBoard/obj/Debug/netcoreapp1.1/reverseJobsBoard.csprojResolveAssemblyReference.cache
+/Users/daschcraft/Documents/workspace/JobsBoard/obj/Debug/netcoreapp1.1/reverseJobsBoard.AssemblyInfo.cs
+/Users/daschcraft/Documents/workspace/JobsBoard/obj/Debug/netcoreapp1.1/reverseJobsBoard.dll
+/Users/daschcraft/Documents/workspace/JobsBoard/obj/Debug/netcoreapp1.1/reverseJobsBoard.pdb
