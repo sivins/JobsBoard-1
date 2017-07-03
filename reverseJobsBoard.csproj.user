@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <StartAction>Project</StartAction>
+    <EnvironmentVariables>
+      <Variable name="PATH" value="/Library/Frameworks/Mono.framework/Commands:/Applications/Visual Studio.app/Contents/Resources:/Applications/Visual Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/usr/local/bin/" xmlns="" />
+    </EnvironmentVariables>
+    <ApplicationURL>http://localhost:62210</ApplicationURL>
+    <LaunchUrl></LaunchUrl>
+  </PropertyGroup>
+</Project>
