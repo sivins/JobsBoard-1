@@ -8,7 +8,6 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { userDataComponent } from './components/users/user.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
 
 import { AuthService } from './components/services/auth.service';
 
@@ -22,7 +21,6 @@ import { AuthService } from './components/services/auth.service';
         CounterComponent,
         FetchDataComponent,
         userDataComponent,
-        RegisterComponent,
         LoginComponent,
         HomeComponent
     ],
@@ -32,6 +30,7 @@ import { AuthService } from './components/services/auth.service';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'login', component: LoginComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'Users', component: userDataComponent},

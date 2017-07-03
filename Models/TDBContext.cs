@@ -25,7 +25,7 @@ namespace reverseJobsBoard.Models
 
             modelBuilder.Entity<UserRole>()
                 .HasOne(pt => pt.Role)
-                .WithMany(t => t.UserRoles)
+                .WithMany(t => t.UserRole)
                 .HasForeignKey(pt => pt.RoleID);
 
             modelBuilder.Entity<UserOrg>()
