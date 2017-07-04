@@ -23,7 +23,8 @@ namespace reverseJobsBoard.Controllers
         [HttpPost] 
         public string GetAuthToken([FromBody]User user) 
         { 
-            var existUser = UserStorage.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password); 
+            using(var db  = new TDBContext()){
+            var existUser = db.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password); 
  
             if (existUser != null) 
             { 
@@ -50,6 +51,7 @@ namespace reverseJobsBoard.Controllers
                     State = RequestState.Failed, 
                     Msg = "Username or password is invalid" 
                 }); 
+            }
             } 
         } 
  
@@ -105,13 +107,4 @@ namespace reverseJobsBoard.Controllers
         } 
     } 
  
- 
-    public static class UserStorage 
-    { 
-        public static List<User> Users { get; set; } = new List<User> { 
-            new User {UserID=Guid.NewGuid(),Username="user1",Password = "user1psd" }, 
-            new User {UserID=Guid.NewGuid(),Username="user2",Password = "user2psd" }, 
-            new User {UserID=Guid.NewGuid(),Username="user3",Password = "user3psd" } 
-        }; 
-    } 
 } 

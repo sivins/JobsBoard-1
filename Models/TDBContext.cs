@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using reverseJobsBoard.Models;
-using reverseJobsBoard.Config;
+using reverseJobsBoard.Configs;
 
 namespace reverseJobsBoard.Models
 {
