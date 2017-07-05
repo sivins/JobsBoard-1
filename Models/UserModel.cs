@@ -16,7 +16,21 @@ namespace reverseJobsBoard.Models
 			public List<UserRole> UserRoles {get; set;}
 			public List<UserOrg> UserOrgs {get;set;}
 			public List<UserTech> UserTech {get;set;}
-			
+			public List<EmpHistory> EmpHistory {get;set;}
 		}
+
+		public class EmpHistory{
+			public Guid historyId {get;set;}
+			public User userId {get;set;}
+			public DateTime StartDate {get;set;}
+			public DateTime EndDate {get;set;}
+			public Boolean isCurrent {get;set;}
+			public String Title {get;set;}
+			public String Location {get;set;}
+			public String Description {get;set;}
+			public Boolean isPublic {get;set;}
+
+		}
+
 
 }
