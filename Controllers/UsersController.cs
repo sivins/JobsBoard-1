@@ -14,21 +14,19 @@ namespace reverseJobsBoard.Controllers
        
 
         [HttpGet("[action]")]
-        public IEnumerable<User> getAllUsers()
-        {
-           User[] Users = new User[]
-            {
-            new User {first_name = "Daniel",last_name=
-            "Ashcraft", email = "something@example.com"},
-            new User {first_name = "Michael",last_name=
-            "Matthews", email = "something@example.com"},
-            new User {first_name = "Jonah",last_name=
-            "Johnson", email = "something@example.com"},
-            new User {first_name = "Mary",last_name=
-            "Wallard", email = "something@example.com"},
-            };
+        public IList<User> getAllUsers()
+        {   
+            using(var db = new TDBContext()){
+                var users = db.Users.Select(u=> new User {
+                    Username = u.Username,
+                    first_name = u.first_name
+                });
 
-            return Users;
+                return users.ToList();
+
+                
+            }
+
         }
         
     }

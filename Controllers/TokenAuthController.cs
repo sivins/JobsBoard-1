@@ -23,35 +23,35 @@ namespace reverseJobsBoard.Controllers
         [HttpPost] 
         public string GetAuthToken([FromBody]User user) 
         { 
-            using(var db  = new TDBContext()){
-            var existUser = db.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password); 
- 
-            if (existUser != null) 
-            { 
-                var requestAt = DateTime.Now; 
-                var expiresIn = requestAt + TokenAuthOption.ExpiresSpan; 
-                var token = GenerateToken(existUser, expiresIn); 
-                Console.WriteLine("So far so good initial request");
-                return JsonConvert.SerializeObject(new RequestResult 
-                { 
-                    State = RequestState.Success, 
-                    Data = new 
+                using(var db  = new TDBContext()){
+                    var existUser = db.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password); 
+
+                    if (existUser != null) 
                     { 
-                        requested = requestAt, 
-                        expiresIn = TokenAuthOption.ExpiresSpan.TotalSeconds, 
-                        tokeyType = TokenAuthOption.TokenType, 
-                        accessToken = token 
+                        var requestAt = DateTime.Now; 
+                        var expiresIn = requestAt + TokenAuthOption.ExpiresSpan; 
+                        var token = GenerateToken(existUser, expiresIn); 
+                        Console.WriteLine("So far so good initial request");
+                        return JsonConvert.SerializeObject(new RequestResult 
+                        { 
+                            State = RequestState.Success, 
+                            Data = new 
+                            { 
+                                requested = requestAt, 
+                                expiresIn = TokenAuthOption.ExpiresSpan.TotalSeconds, 
+                                tokeyType = TokenAuthOption.TokenType, 
+                                accessToken = token 
+                            } 
+                        }); 
                     } 
-                }); 
-            } 
-            else 
-            { 
-                return JsonConvert.SerializeObject(new RequestResult 
-                { 
-                    State = RequestState.Failed, 
-                    Msg = "Username or password is invalid" 
-                }); 
-            }
+                    else 
+                    { 
+                        return JsonConvert.SerializeObject(new RequestResult 
+                        { 
+                            State = RequestState.Failed, 
+                            Msg = "Username or password is invalid" 
+                        }); 
+                    }
             } 
         } 
  
@@ -65,7 +65,7 @@ namespace reverseJobsBoard.Controllers
                 new[] { 
                     new Claim("UserID", user.UserID.ToString())
                 } 
-            ); 
+            );
  
             var securityToken = handler.CreateToken(new SecurityTokenDescriptor 
             { 
@@ -86,7 +86,7 @@ namespace reverseJobsBoard.Controllers
         { 
             try{
             var claimsIdentity = User.Identity as ClaimsIdentity; 
- 
+            
             return JsonConvert.SerializeObject(new RequestResult 
             { 
                 State = RequestState.Success, 
